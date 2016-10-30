@@ -21,4 +21,5 @@ Erfolgreich:
 
 Nicht Erfolgreich:
 
-
+## Credits
++ [https://pypi.python.org/pypi/RPi.GPIO](RPi.GPIO)
