@@ -5,13 +5,13 @@ Das Ziel ist eine API zuschreiben über ein Ton wiedergegeben werden kann. Das s
 Zum Starten das Script `klingel.py` mit python ausführen. Dazu muss die RPi GPIO Lib installiert sein.
 
 ## Installieren
-Zum Installieren bitte das Bash-Script `install.sh` mit Root-Rechten ausführen. Das aktuelle Installationsscript funktioniert nur für Distributionen die systemd verwenden. 
+Zum Installieren bitte das Bash-Script `install.sh` mit Root-Rechten ausführen. Das aktuelle Installationsscript funktioniert nur für Distributionen die systemd verwenden. Bisher wurde nur Raspbian getestet.
 
 ## Licence
 GPLv2
 
 ## Todos
-+ unterstütze mehrer unterschiedliche events wie "Space-Status changed", "New User in IRC", ...
++ unterstütze mehrer unterschiedliche Events wie "Space-Status changed", "New User in IRC", ...
 
 ## Geräte und Tests
 Bisher wurde das Script auf folgenden Geräten getestet:
