@@ -1,0 +1,9 @@
+[Unit]
+Description=Klingel
+After=network.target
+
+[Service]
+ExecStart=/opt/klingel/klingel.py
+
+[Install]
+WantedBy=multi-user.target

@@ -5,7 +5,7 @@ Das Ziel ist eine API zu schreiben über die ein Ton wiedergegeben werden kann. 
 Zum Starten das Script `klingel.py` mit python ausführen. Dazu muss die RPi GPIO Lib installiert sein.
 
 ## Installieren
-Zum Installieren bitte das Bash-Script `install` mit Root-Rechten ausführen. Das aktuelle Installationsscript funktioniert nur für Distributionen die systemd verwenden. 
+Zum Installieren bitte das Bash-Script `install.sh` mit Root-Rechten ausführen. Das aktuelle Installationsscript funktioniert nur für Distributionen die systemd verwenden. Bisher wurde nur Raspbian getestet.
 
 Um den Service zu aktivieren ´systemctl enable klingel` ausführen. `systemctl status klingel` zeigt den Status an.
 
@@ -13,7 +13,7 @@ Um den Service zu aktivieren ´systemctl enable klingel` ausführen. `systemctl 
 GPLv2
 
 ## Todos
-+ unterstütze mehrer unterschiedliche events wie "Space-Status changed", "New User in IRC", ...
++ unterstütze mehrer unterschiedliche Events wie "Space-Status changed", "New User in IRC", ...
 
 ## Geräte und Tests
 Bisher wurde das Script auf folgenden Geräten getestet:
@@ -23,4 +23,5 @@ Erfolgreich:
 
 Nicht Erfolgreich:
 
-
+## Credits
++ [https://pypi.python.org/pypi/RPi.GPIO](RPi.GPIO)
