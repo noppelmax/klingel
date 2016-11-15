@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style>
+body {
+  padding: 0 auto;
+  margin: 0 auto;
+  font-family: Ubuntu, SansSerif;
+
+}
+
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center; width: 25% margin: auto;">
+      <div style="height: 30%;"></div>
+      <img id="klingel" style="width: 15%;"  src="klingelicon.jpg"></img>
+      <p id="txt" >Klick mich um zu klingeln!</p>
+    </div>
+  </body>
+  <script>
+
+function klingelEvent(){
+  console.log("Klingeln...");
+
+  document.getElementById("klingel").removeEventListener("click",klingelEvent);
+  document.getElementById("txt").innerHTML = "Es wird geklingelt... Bitte warten...";
+
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", ":3004", false );
+  xmlHttp.send( null );
+
+  document.getElementById("klingel").addEventListener("click", klingelEvent);
+  document.getElementById("txt").innerHTML = "Klick mich um zu klingeln!";
+
+}
+
+document.getElementById("klingel").addEventListener("click", klingelEvent);
+
+  </script>
+</html>
