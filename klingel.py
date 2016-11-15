@@ -13,6 +13,7 @@ PORT = 3004
 IP = "0.0.0.0"
 
 PIN = 23
+PIN2 = 25
 
 
 # Server
@@ -26,13 +27,17 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     s.send_header("Content-type","text/html")
     s.end_headers()
     GPIO.output(PIN, GPIO.HIGH)
+    GPIO.output(PIN2, GPIO.HIGH)
     sleep(1)
     GPIO.output(PIN, GPIO.LOW)
+    sleep(5)
+    GPIO.output(PIN2, GPIO.LOW)
 
 # Mainloop
 def main():
   GPIO.setmode(GPIO.BCM)
   GPIO.setup( PIN, GPIO.OUT)
+  GPIO.setup( PIN2, GPIO.OUT)
 
   httpd = SocketServer.TCPServer((IP, PORT), MyHandler)
 
