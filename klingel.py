@@ -26,7 +26,7 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     GPIO.output(PIN2, GPIO.HIGH)
     sleep(1)
     GPIO.output(PIN, GPIO.LOW)
-    sleep(5)
+    sleep(10);
     GPIO.output(PIN2, GPIO.LOW)
 
 
