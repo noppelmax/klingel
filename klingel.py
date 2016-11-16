@@ -3,7 +3,7 @@
 import sys
 import signal
 
-import BaseHTTPServer
+import SimpleHTTPServer
 import SocketServer
 
 import RPi.GPIO as GPIO
@@ -17,12 +17,8 @@ PIN2 = 25
 
 
 # Server
-class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
-  def do_HEAD(s):
-    s.send_response(200)
-    s.send_header("Content-type","text/html")
-    s.end_headers()
-  def do_GET(s):
+class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+  def do_POST(s):
     s.send_response(200)
     s.send_header("Content-type","text/html")
     s.end_headers()
@@ -32,6 +28,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     GPIO.output(PIN, GPIO.LOW)
     sleep(5)
     GPIO.output(PIN2, GPIO.LOW)
+
 
 # Mainloop
 def main():
