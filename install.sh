@@ -2,7 +2,7 @@
 
 echo "Installing klingel.py..."
 mkdir /opt/klingel
-cp klingel.py /opt/klingel/klingel.py
+cp * /opt/klingel/
 chmod +x /opt/klingel/klingel.py
 
 echo "Setting up systemd service..."
