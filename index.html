@@ -15,7 +15,7 @@ body {
   <body>
     <div style="text-align: center; width: 25% margin: auto;">
       <div style="height: 30%;"></div>
-      <img id="klingel" style="width: 15%;"  src="klingelicon.png"></img>
+      <img id="klingel" style="width: 15%;"  src="klingel_icon.png"></img>
       <p id="txt" >Klick mich um zu klingeln!</p>
     </div>
   </body>
@@ -26,6 +26,7 @@ function klingelEvent(){
 
   document.getElementById("klingel").removeEventListener("click",klingelEvent);
   document.getElementById("txt").innerHTML = "Es wird geklingelt... Bitte warten...";
+  document.getElementById("klingel").src="klingel_waiting.gif";
 
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "POST", ":3004", false );
@@ -33,6 +34,7 @@ function klingelEvent(){
 
   document.getElementById("klingel").addEventListener("click", klingelEvent);
   document.getElementById("txt").innerHTML = "Klick mich um zu klingeln!";
+  document.getElementById("klingel").src="klingel_icon.png";
 
 }
 
