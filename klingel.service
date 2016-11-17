@@ -3,6 +3,7 @@ Description=Klingel
 After=network.target
 
 [Service]
+WorkingDirectory=/opt/klingel
 ExecStart=/opt/klingel/klingel.py
 
 [Install]

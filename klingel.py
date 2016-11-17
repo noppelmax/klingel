@@ -9,7 +9,7 @@ import SocketServer
 import RPi.GPIO as GPIO
 from time import sleep
 
-PORT = 3004
+PORT = 80
 IP = "0.0.0.0"
 
 PIN = 23
