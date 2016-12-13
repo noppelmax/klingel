@@ -7,7 +7,7 @@ Zum Starten das Script `klingel.py` mit python ausführen. Dazu muss die RPi GPI
 ## Installieren
 Zum Installieren bitte das Bash-Script `install.sh` mit Root-Rechten ausführen. Das aktuelle Installationsscript funktioniert nur für Distributionen die systemd verwenden. Bisher wurde nur Raspbian getestet.
 
-Um den Service zu aktivieren ´systemctl enable klingel` ausführen. `systemctl status klingel` zeigt den Status an.
+Um den Service zu aktivieren `systemctl enable klingel` ausführen. `systemctl status klingel` zeigt den Status an.
 
 ## Licence
 GPLv2
